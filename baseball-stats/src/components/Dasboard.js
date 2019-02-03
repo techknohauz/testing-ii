@@ -44,7 +44,7 @@ import Display from './Display';
         return (
             <div>
                 <h1>Dashboard</h1>
-                <Display atbat={this.state}/>
+                <Display data-testid='display' atbat={this.state}/>
                 <form> 
                     <button className='btn' name='strike' type='button' onClick={this.updateStrikes}>Strike</button>
                     <button className='btn' name='ball' type='button' onClick={this.updateBalls}>Ball</button>
