@@ -15,7 +15,7 @@ import Display from './Display';
      updateStrikes = () => {
         let updatedStrikes = this.state.strikes;
         updatedStrikes++;
-        if (updatedStrikes > 3) {
+        if (updatedStrikes >= 3) {
             updatedStrikes = 0;
         }
         this.setState({
@@ -25,7 +25,7 @@ import Display from './Display';
     updateBalls = () => {
         let updatedBalls = this.state.balls;
         updatedBalls++;
-        if (updatedBalls > 4) {
+        if (updatedBalls >= 4) {
             updatedBalls = 0; 
         }
         this.setState({
@@ -44,7 +44,7 @@ import Display from './Display';
         return (
             <div>
                 <h1>Dashboard</h1>
-                <Display />
+                <Display atbat={this.state}/>
                 <form> 
                     <button className='btn' name='strike' type='button' onClick={this.updateStrikes}>Strike</button>
                     <button className='btn' name='ball' type='button' onClick={this.updateBalls}>Ball</button>
